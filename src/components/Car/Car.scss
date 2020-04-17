@@ -1,0 +1,66 @@
+.car {
+	position: relative;
+	top: 50px;
+	left: 50px;
+	width: 150px;
+	height: 25px;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: 15px;
+		width: 20px;
+		height: 20px;
+		border: 2px solid silver;
+		border-radius: 50%;
+		z-index: 2;
+		background-color: inherit;
+	}
+
+	&::before {
+		left: 20px;
+	}
+
+	&::after {
+		left: 105px;
+	}
+
+	.top {
+		position: relative;
+		top: -17px;
+		left: 45%;
+		transform: translateX(-50%);
+		width: 90px;
+		height: 20px;
+		border-top-left-radius: 25px;
+		border-top-right-radius: 25px;
+		background-color: inherit;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 5px;
+			height: 80%;
+			width: 40%;
+			background-color: white;
+		}
+
+		&::before {
+			left: 5px;
+			border-top-left-radius: 30px;
+		}
+
+		&::after {
+			right: 5px;
+			border-top-right-radius: 30px;
+		}
+	}
+}

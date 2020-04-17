@@ -1,0 +1,28 @@
+.board {
+	max-width: min-content;
+	margin: 2rem;
+	padding: 5px 15px;
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: var(--bx-shadow);
+
+	.board__title {
+		font-size: 1.5rem;
+	}
+
+	.board__ul {
+		padding-left: 10px;
+
+		.board__li {
+			list-style: none;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			font-weight: bold;
+
+			span {
+				font-weight: normal;
+			}
+		}
+	}
+}
