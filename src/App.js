@@ -3,10 +3,11 @@ import "./App.scss";
 import Car from "./components/Car/Car";
 import Button from "./components/Button/Button";
 import Leaderboard from "./components/Leaderboard/Leaderboard";
+import { Login } from "./pages/Login/Login";
 
 // TODO
 /*
-1 - New home page for person to log in
+// 1 - New home page for person to log in
 2 - Add node, express, and socket io
 3 - Create Context for colors and users
 4 - Create logic for person to choose color for car
@@ -20,7 +21,7 @@ function App() {
 
 	return (
 		<div className="App">
-			<Leaderboard colors={colors} />
+			{/* <Leaderboard colors={colors} />
 			<div className="btn-container">
 				<Button type="start" />
 				<Button type="restart" />
@@ -29,7 +30,8 @@ function App() {
 				{colors.map((clr) => (
 					<Car color={clr} />
 				))}
-			</div>
+			</div> */}
+			<Login />
 		</div>
 	);
 }
