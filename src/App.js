@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.scss";
-import Car from "./components/Car/Car";
-import Button from "./components/Button/Button";
-import Leaderboard from "./components/Leaderboard/Leaderboard";
 import { Login } from "./pages/Login/Login";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Main from "./pages/Main/Main";
+
 
 // TODO
 /*
@@ -17,23 +17,25 @@ import { Login } from "./pages/Login/Login";
 */
 
 function App() {
-	const colors = ["red", "blue", "green"];
+
 
 	return (
-		<div className="App">
-			{/* <Leaderboard colors={colors} />
-			<div className="btn-container">
-				<Button type="start" />
-				<Button type="restart" />
-			</div>
-			<div className="car-container">
-				{colors.map((clr) => (
-					<Car color={clr} />
-				))}
-			</div> */}
-			<Login />
-		</div>
-	);
+    <div className="App">
+      <Router>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={({ history }) => <Main hist={history} />}
+          />
+            <Route
+              path="/login"
+              render={({ history }) => <Login hist={history} />}
+            />
+        </Switch>
+      </Router>
+    </div>
+  );
 }
 
 export default App;

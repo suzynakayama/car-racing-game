@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { UserContext, GameContext, initialUser, initialGame } from './Context';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <UserContext.Provider value={initialUser}>
+      <GameContext.Provider value={initialGame}>
+        <App />
+      </GameContext.Provider>
+    </UserContext.Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
